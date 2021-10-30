@@ -1,0 +1,10 @@
+I still can't get my unit tests working, and I only realized that this assignment had a whole other part just before it was due which is why I don't have all of it done.
+
+Date-time API questions
+1. I would use an Instant
+2. Using java.time.DayOfWeek.getValue(), you can get an integer indicating how many days since the previous Sunday. I would then add 7 to days less than or equal to four (before or on Thursday), and then use the plusDays method with plus 4 minus that number to get the date of the previous Thursday.
+3. ZoneIDs are used to represent specific regions with distinct timezones. They can contain a staightforward offset like +5 hours or -2 and a half hours, but they can also contain rules for weird nonsense like daylight savings time.
+4. the atZone method of an Instant can be used to convert to a ZonedDateTime, and the inherited method toInstant of a ZonedDateTime can be used to do the opposite.
+5. For this, I would use if statements to check if the year is divisible by 100 but not 400. If not, another if statement would check if it's divisible by 4, giving all leap years, and if it is set a boolean to true. Then I would print all months' day numbers, with 28 for a non-leap february and 29 for a leap february.
+6. For this, I would construct an ArrayList of Strings. Then I would run a for loop over days in that month, checking each for DayofWeek=="MONDAY". Each time the if statement was true, I would add that day to the ArrayList.
+7. This just requires 2 conditions with either nested if statements or a single if statement with &&. The two conditions would be that the day ==13 and DayOfWeek=="FRIDAY"

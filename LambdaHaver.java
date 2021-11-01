@@ -18,5 +18,10 @@ public class LambdaHaver {
             }
             return true;
         };
+        NumberTransformer rightmostDigit = (Integer number) ->{
+            String stringNum = String.valueOf(number);
+            Character charNum = stringNum.charAt(stringNum.length()-1);
+            return Character.getNumericValue(charNum);
+        };
     }
 }
